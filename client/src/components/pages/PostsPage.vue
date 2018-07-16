@@ -15,6 +15,7 @@
             <tr v-for="(post, index) in posts" :key="post.title" >
               <td>{{ post.title }}</td>
               <td>{{ post.description }}</td>
+              <td><router-link :to="{ name: 'EditPost', params: { id: post._id } } ">Редактировать</router-link></td>
             </tr>
           </table>
         </section>
@@ -44,8 +45,9 @@
     methods: {
       async getPosts () {
         const response = await PostsService.fetchPosts()
-        this.posts = response.data
-        console.log(this.posts.length)
+        // console.log(response.data.posts)
+        this.posts = response.data.posts
+        // console.log(this.posts.length)
       }
     },
 
