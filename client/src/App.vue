@@ -1,8 +1,12 @@
 <template>
-  <div id="app">
+  <div id="app" class="mainWrapper">
     <!-- <img src="./assets/logo.png"> -->
-    <MainHeader></MainHeader>
-    <router-view/>
+    
+      <MainHeader :siteName="siteName" :siteDsc="siteDsc"></MainHeader>
+      <main class="mainContent">
+        <router-view/>
+      </main>
+    
     <MainFooter></MainFooter>
   </div>
 </template>
@@ -13,6 +17,13 @@ import MainFooter from './components/stdElem/MainFooter.vue'
 
 export default {
   name: 'App',
+  data(){
+    // 
+    return {
+      siteName: 'Тета',
+      siteDsc: 'веб-приложения'
+    }
+  },
   components: {
   	MainHeader: MainHeader,
   	MainFooter: MainFooter
@@ -21,5 +32,15 @@ export default {
 </script>
 
 <style>
-
+.mainWrapper{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.mainContent{
+  flex: 1;
+}
+body{
+  font-size: 18px;
+}
 </style>
