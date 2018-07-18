@@ -1,13 +1,13 @@
 <template>
   <v-container tag="section">
-    <h2>Главная</h2>
+  <h2>Контакты</h2>
   </v-container>
   		
 </template>
 
 <script>
 export default {
-  name: 'StartPage',
+  name: 'Contacts',
   data () {
     return {
      
@@ -17,5 +17,6 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
+
 </style>

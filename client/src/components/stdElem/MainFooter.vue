@@ -1,14 +1,8 @@
 <template>
-	<footer class="MainFooter container-fluid">
-		<div class="row">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						Тета - креативная мастерская
-					</div>
-				</div>
-			</div>
-		</div>
+	<footer class="MainFooter">
+		<v-container :fluid="true">
+			&#169; Креативная мастерская «Тета», 2011–2018
+		</v-container>
 	</footer>
 </template>
 
@@ -22,7 +16,5 @@
 	.MainFooter{
 		background-color: #555;
 		color: white;
-		padding-top: 20px;
-		padding-bottom: 20px;
 	}
 </style>

@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <h1>Новости</h1>
+        <h2>Новости</h2>
         <h3>Все новости</h3>
         <section class="panel panel-success" v-if="posts.length">
           <div class="panel-heading">Список новостей</div>
