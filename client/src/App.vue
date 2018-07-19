@@ -147,4 +147,10 @@ export default {
 body{
   font-size: 18px;
 }
+
+/* standart Paddings */
+.no-h-pd{
+  padding-left: 0;
+  padding-right: 0;
+}
 </style>

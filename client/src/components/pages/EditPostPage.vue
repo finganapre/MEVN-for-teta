@@ -1,15 +1,15 @@
 <template>
-  <section class="edit">
-    <h1>Редактировать новость</h1>
-    <form action="editPost()">
+  <v-container tag="section" class="edit">
+    <h1>Редактирование новости "{{ post.title }}"</h1>
+    <form action="">
       <div><input type="text" name="title" id="title" placeholder="Заголовок новости" v-model.trim="post.title"></div>
       <div><input type="text" name="description" id="description" placeholder="Текст новости" v-model.trim="post.description"></div>
-      <div><button type="submit" name="editPost">редактировать новость</button></div>
+      <div><v-btn type="submit" color="primary" name="EditPost">Применить</v-btn></div>
       <div>
-        <router-link :to="{name:'Posts'}">перейти к списку новостей</router-link>
+        <v-btn color="primary" outline :to="{name:'Posts'}">перейти к списку новостей</v-btn>
       </div>
     </form>
-  </section>
+  </v-container>
 </template>
 
 <script>
