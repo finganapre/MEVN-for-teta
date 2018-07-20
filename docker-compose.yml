@@ -1,7 +1,8 @@
 version: '3.3'
 services:
   client:
-    image: messer/client
+    build: 
+      context: ./client
     ports:
       - 8080:80
   mongodb:
@@ -9,7 +10,8 @@ services:
     volumes:
       - mongo_db:/data/db
   server:
-    image: messer/server
+    build:
+      context: ./server
     ports:
       - 8081:8081
 volumes:
