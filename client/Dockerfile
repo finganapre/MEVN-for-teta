@@ -18,5 +18,6 @@ COPY . .
 RUN npm run build
 
 FROM nginx
+ENV BASE_URL="http://server:8081"
 COPY --from=build /usr/src/app/dist /usr/share/nginx/html
 

@@ -14,7 +14,7 @@ RUN npm install
 
 # Bundle app source
 COPY src .
-ENV MONGODB_URL=mongodb://mongodb/articles
+ENV MONGODB_URL_NEWS=mongodb://mongodb/articles
 ENV PORT=8081
 EXPOSE 8081
 CMD [ "npm", "start" ]
