@@ -1,25 +1,27 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>Добавить новость</h1>
+  <v-container>
+        <h1>Добавление новости</h1>
         <form action="" @submit.prevent='addPost'>
-          <div class="form-group">
-            <input type="text" class="form-control" name="title" id="title" placeholder="Заголовок новости" v-model.trim="post.title">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" type="text" rows="5" name="description" id="description" placeholder="Текст новости" v-model.trim="post.description"></textarea>
-          </div>
-          <div class="form-group">
-            <button class="btn btn-block btn-primary" type="submit" name="addPost" id="addPost">добавить новость</button>
-          </div>
-          <section>
-            <button class="btn btn-success btn-block" type="button" @click="goBack()">перейти к новостям</button>
-          </section>
+          <v-text-field
+            v-model.trim="post.title"
+            label="Заголовок новости"
+          ></v-text-field>
+
+          <v-text-field
+            v-model.trim="post.description"
+            label="Описание новости"
+          ></v-text-field>
+
+          <v-textarea
+            label="Текст новости"
+          >
+          </v-textarea>
+
+          <v-btn
+            @click="addPost">Добавить новость</v-btn>
+          <v-btn @click="goBack()">Все новости</v-btn>
         </form>
-      </div>
-    </div>
-  </div>
+  </v-container>    
 </template>
 
 <script>

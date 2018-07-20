@@ -6,16 +6,16 @@ import router from './router'
 // import '@/plugins/bootstrap'
 
 import 'vuetify/dist/vuetify.min.css'
-import Vuetify from 'vuetify' 
+import Vuetify from 'vuetify'
+
 Vue.use(Vuetify)
 
-
-
-Vue.use(vuelidate.default)
+import VeeValidate from 'vuetify'
+Vue.use(VeeValidate)
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   router,

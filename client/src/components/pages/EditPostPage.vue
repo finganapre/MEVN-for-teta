@@ -1,26 +1,18 @@
 <template>
   <v-container tag="section" class="edit">
-    <h1>Редактирование новости "{{ post.title }}"</h1>
+    <h1>Редактирование новости &laquo;{{ post.title }}&raquo;</h1>
     <form>
       <v-text-field
-        v-model="post.title"
-        :error-messages="titleErrors"
-        :counter="10"
         label="Заголовок"
-        required
-        @input="$v.title.$touch()"
-        @blur="$v.title.$touch()"
+        v-model.trim="post.title"
       ></v-text-field>
       <v-text-field
-        v-model="post.description"
-        :error-messages="descriptionErrors"
-        label="Текст новости"
-        required
-        @input="$v.description.$touch()"
-        @blur="$v.description.$touch()"
+        label="Краткое описание"
+        v-model.trim="post.description"
       ></v-text-field>
   
-      <v-btn @click="submit">Сохранить изменения</v-btn>
+      <v-btn type="submit" color="primary" name="EditPost">Сохранить изменения</v-btn>
+      <v-btn color="primary" outline :to="{name:'Posts'}">Перейти к списку новостей</v-btn>
     </form>
     <!-- 
     <form action="">
@@ -37,26 +29,17 @@
 
 <script>
   import PostsService from '@/services/PostsService'
-  const { required, maxLength, email } = validators
-  const validationMixin = vuelidate.validationMixin
-  
+
   export default {
     name: 'EditPost',
-     mixins: [validationMixin],
 
-    validations: {
-      title: { required, maxLength: maxLength(25) },
-      description: { required }
-    },
-
-    data () {
-      return {
-        post: {
-          title: '',
-          description: ''
-        }
-      }
-    },
+    data: () => ({
+      
+      post: {
+        title: '',
+        description: ''
+      },
+    }),
 
     methods: {
       async getPost () {
@@ -73,26 +56,10 @@
           })
           this.$router.push({ name: 'Posts' })
         }
-      },
-      submit () {
-        this.$v.$touch()
       }
     },
 
     computed: {
-      titleErrors () {
-        const errors = []
-        if (!this.$v.title.$dirty) return errors
-        !this.$v.title.maxLength && errors.push('Максимальная длинна заголовка 25 символов')
-        !this.$v.title.required && errors.push('Придумайте заголовок')
-        return errors
-      },
-      descriptionErrors () {
-        const errors = []
-        if (!this.$v.description.$dirty) return errors
-        !this.$v.description.required && errors.push('Придумайте краткое описание новости')
-        return errors
-      }
     },
     mounted () {
       this.getPost()
