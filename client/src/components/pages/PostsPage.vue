@@ -89,17 +89,6 @@
 
     mounted () {
       this.getPosts()
-    },
-
-    /*restructingPosts () {
-      for (let i in this.posts){
-        console.log(this.posts[i].title);
-        //this.restructPosts.push({})
-      }
-    }*/
-
-    /*created () {
-      this.restructPosts()
-    }*/
+    }
   }
 </script>

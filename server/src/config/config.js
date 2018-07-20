@@ -1,5 +1,5 @@
 module.exports = {
-	port: 8081,
-	dbURL: 'mongodb://localhost/articles',
+	port: process.env.PORT || 8081,
+	dbURL: process.env.MONGODB_URL_NEWS || 'mongodb://localhost/articles',
 	dbOptions: { useMongoClient: true }
 }

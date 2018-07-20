@@ -1,3 +1,4 @@
+// "start": "node src/index.js" start on production
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
