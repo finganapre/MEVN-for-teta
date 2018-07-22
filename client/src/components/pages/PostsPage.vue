@@ -47,10 +47,13 @@
             Поиск по запросу "{{ search }}" не дал результатов.
           </v-alert>
 
-          <template slot="no-data" v-if="!loadingPosts">
-            <v-alert :value="true" color="error" icon="warning">
+          <template slot="no-data">
+            <v-alert :value="true" color="error" icon="warning" v-if="!loadingPosts">
               Новостная база данных пуста
             </v-alert>
+            <div class="text-md-center" v-else-if="loadingPosts">
+              Загрузка данных...
+            </div>
           </template>
 
         </v-data-table>
