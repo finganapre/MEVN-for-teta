@@ -71,13 +71,14 @@
     		<!-- End NAVBAR -->
     <div class="mainWrapper">
       <MainHeader
+        id="MainHeader"
       	:siteName="siteName"
 				:siteDescription="siteDescription"
 				@changeMainNavState="openCloseMainNav"
 				@openAppMenu="openAppMenu"
 				:appsList="mainNavbarMenuListServices">
 			</MainHeader>
-      <main class="mainContent">
+      <main class="mainContent" :style="spacingForMainHeader">
       	<!-- <v-progress-circular
         indeterminate
         color="primary"
@@ -128,6 +129,18 @@ export default {
 
   	}
   },
+  computed:{
+    spacingForMainHeader(){
+      console.log(this.$refs);
+      /*let mainHeader = this.$el;
+      console.log(this.$el);*/
+      return 'margin-top: 64px';
+    }
+  },
+  mounted(){
+    //this.spacingForMainHeader();
+  },
+  
   components: {
   	MainHeader: MainHeader,
   	MainFooter: MainFooter
@@ -145,7 +158,7 @@ export default {
   flex: 1;
 }
 body{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 /* standart Paddings */

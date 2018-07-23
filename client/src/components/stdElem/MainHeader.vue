@@ -1,6 +1,6 @@
 <template>
 <div class="MainHeader">
-	<v-toolbar dark color="primary">
+	<v-toolbar dark color="primary" :fixed="true">
 	     <v-toolbar-side-icon @click="$emit('changeMainNavState')"></v-toolbar-side-icon>
 	 
 	     <v-toolbar-title class="white--text">
