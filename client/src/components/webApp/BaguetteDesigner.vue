@@ -1,6 +1,6 @@
 <template>
   <v-container tag="section">
-  <h2>Конструктор багетов</h2>
+  <v-container pa-0 pb-3><h2 class="display-1">Конструктор багетов</h2></v-container>
   <v-alert
   	:value="true"
     color="warning"

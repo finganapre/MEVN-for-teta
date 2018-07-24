@@ -1,6 +1,6 @@
 <template>
   <v-container>
-        <h1>Добавление новости</h1>
+        <v-container pa-0 pb-3><h2 class="display-1">Добавление новости</h2></v-container>
         <form action="" @submit.prevent='addPost'>
           <v-text-field
             v-model.trim="post.title"

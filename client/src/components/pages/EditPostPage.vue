@@ -1,6 +1,6 @@
 <template>
   <v-container tag="section" class="edit">
-    <h1>Редактирование новости &laquo;{{ post.title }}&raquo;</h1>
+    <v-container pa-0 pb-3><h2 class="display-1">Редактирование новости &laquo;{{ post.title }}&raquo;</h2></v-container>
     <form>
       <v-text-field
         label="Заголовок"

@@ -1,6 +1,6 @@
 <template>
   <v-container tag="section">
-    <h2>Новости</h2>
+    <v-container pa-0 pb-3><h2 class="display-1">Новости</h2></v-container>
     <v-spacer/>
       
       <!-- <v-subheader class="no-h-pd">Список новостей</v-subheader> -->
@@ -59,6 +59,7 @@
         </v-data-table>
 
       </v-card>
+      
   </v-container>
 </template>
 

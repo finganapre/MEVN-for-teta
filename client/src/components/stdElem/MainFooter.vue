@@ -14,7 +14,8 @@
 
 <style scoped>
 	.MainFooter{
-		background-color: #555;
+		background-color: #424242;
 		color: white;
+		transition: all 2s;
 	}
 </style>

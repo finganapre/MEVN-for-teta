@@ -1,7 +1,7 @@
 <template>
   <div>
   <v-container tag="section">
-    <h2>Конструктор фотокниг</h2>
+    <v-container pa-0 pb-3><h2 class="display-1">Конструктор фотокниг</h2></v-container>
     <v-alert
     	:value="true"
       color="warning"
@@ -28,8 +28,9 @@
             </v-pagination>
           </v-card-text>
 
-          <transition name="flip" mode="out-in">
+          
           <v-card-text class="PhotoBook__book">
+          <transition name="paging" mode="out-in">
             <div
               class="PhotoBookSpread"
               v-for="(phtoBookSpread, spreadIndex) in photoBook.spreads"
@@ -88,8 +89,9 @@
                 
               </div>
             </div>
+            </transition>
           </v-card-text>
-        </transition>
+        
 
           <v-card-text>
             
@@ -483,11 +485,13 @@ export default {
 .PhotoBook__book {
   /*display: table;
   content: '';*/
+  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
+
 .PhotoBookSpread{
   /*display: table;
   content: '';*/
@@ -574,7 +578,7 @@ export default {
 }
 
 /* Animation */
-  .flip-leave{
+ /* .flip-leave{
   }
   .flip-leave-to{
   }
@@ -604,6 +608,15 @@ export default {
     to{
       transform: rotateX(90deg)
     }
-  }
+  }*/
+
+/*  router animation */
+.paging-enter-active, .paging-leave-active {
+  transition: opacity 0.25s, transform 0.25s;
+}
+.paging-enter, .paging-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
 
 </style>

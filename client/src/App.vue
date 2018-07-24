@@ -83,7 +83,13 @@
         indeterminate
         color="primary"
       ></v-progress-circular> -->
-        <router-view/>
+      <!--<transition appear name="fade" mode="out-in">
+        <router-view v-if="routerLoadComplite" id="content" :key="'page' + $route.params.id"></router-view>
+        <div id="wait" v-else>{{ getRouterState() }}</div>
+      </transition>-->
+      <transition appear name="page" mode="out-in">
+        <router-view></router-view>
+      </transition>
       </main>
     
     <MainFooter></MainFooter>
@@ -101,6 +107,8 @@ export default {
   data(){
     // 
     return {
+      routerLoadComplite: '',
+
       siteName: 'Тета',
 			siteDescription: 'веб-приложения',
 
@@ -117,7 +125,8 @@ export default {
 			],
 			mainNavbarMenuListServices: [
 				['Конструктор фотокниг', 'extension', '/designer-of-photobooks'],
-				['Конструктор багетов', 'extension', '/baguette-designer']
+				['Конструктор багетов', 'extension', '/baguette-designer'],
+        ['Менеджер событий', 'extension', '/events-manager']
 			]
     }
   },
@@ -127,18 +136,24 @@ export default {
   	},
   	openAppMenu(){
 
-  	}
+  	},
+    getRouterState(){
+      console.log(this.$route.params);
+    }
   },
+  
   computed:{
     spacingForMainHeader(){
       console.log(this.$refs);
       /*let mainHeader = this.$el;
       console.log(this.$el);*/
       return 'margin-top: 64px';
-    }
+    },
+
+    
   },
   mounted(){
-    //this.spacingForMainHeader();
+    
   },
   
   components: {
@@ -165,5 +180,14 @@ body{
 .no-h-pd{
   padding-left: 0;
   padding-right: 0;
+}
+
+/*  router animation */
+.page-enter-active, .page-leave-active {
+  transition: opacity 0.3s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+  /*transform: translateX(-30%);*/
 }
 </style>

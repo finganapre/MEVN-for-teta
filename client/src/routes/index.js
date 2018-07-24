@@ -10,6 +10,7 @@ import EditPost from '@/components/pages/EditPostPage'
 // webApp
 import DesignerOfPhotobooks from '@/components/webApp/DesignerOfPhotobooks'
 import BaguetteDesigner from '@/components/webApp/BaguetteDesigner'
+import EventsManager from '@/components/webApp/EventsManager'
 
 import Page404 from '@/components/pages/Page404'
 
@@ -58,6 +59,11 @@ const routes = [
     name: 'BaguetteDesigner',
     component: BaguetteDesigner
   },
+  {
+    path: '/events-manager',
+    name: 'EventsManager',
+    component: EventsManager
+  },
 
   // внешние ссылки
   {
@@ -72,6 +78,8 @@ const routes = [
             window.location = "http://fotostoriya.ru/";
     }
   },
+
+  // обработка ошибок
   {
     path: '*',
     name: 'Page404',
