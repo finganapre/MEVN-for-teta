@@ -9,7 +9,7 @@
     		
     			<v-navigation-drawer
     				v-model="mainNavbarDrawer"
-    				absolute
+    				fixed
     				temporary
     			>
     				<v-list class="pa-1">

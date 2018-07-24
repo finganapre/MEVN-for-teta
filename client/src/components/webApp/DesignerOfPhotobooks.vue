@@ -27,6 +27,8 @@
             >
             </v-pagination>
           </v-card-text>
+
+          <transition name="flip" mode="out-in">
           <v-card-text class="PhotoBook__book">
             <div
               class="PhotoBookSpread"
@@ -87,6 +89,7 @@
               </div>
             </div>
           </v-card-text>
+        </transition>
 
           <v-card-text>
             
@@ -140,15 +143,116 @@ export default {
                 photos: [
                   {
                     position: 'adapt', // standart
-                    src: '' // db in future
+                    src: 'https://s1.1zoom.ru/prev2/536/Tigers_Painting_Art_Night_Glance_535374_300x200.jpg' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'http://for-androidos.com/uploads/posts/2016-02/1454432563_logo.jpg' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'http://pristor.ru/wp-content/uploads/2017/05/%D0%9A%D1%80%D0%B0%D1%81%D0%B8%D0%B2%D1%8B%D0%B5-%D0%B8-%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8-%D0%90%D0%BD%D0%B4%D0%B5%D1%80%D1%82%D0%B5%D0%B9%D0%BB-%D0%90%D0%B7%D1%80%D0%B8%D1%8D%D0%BB%D1%8C-%D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-15.jpg' // db in future
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                template: '', // className
+                photos: [
+                  {
+                    position: 'adapt', // standart
+                    src: 'https://i.ytimg.com/vi/0u0YVmvmb8Y/maxresdefault.jpg' // db in future
                   },
                   {
                     position: 'standart', // adapt
                     src: '' // db in future
+                  }
+                ]
+              },
+              {
+                template: '', // className
+                photos: [
+                  {
+                    position: 'adapt', // standart
+                    src: 'http://s1.1zoom.me/big0/930/Coast_Sunrises_and_sunsets_Waves_USA_Ocean_Kaneohe_521540_1280x775.jpg' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7SOaqUs8Q3CA-6bVK6yI23mcGPI4UlC449Db8VjTmejQQook7' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'https://s1.1zoom.ru/big0/68/379017-svetik.jpg' // db in future
+                  },
+                  {
+                    position: 'adapt', // standart
+                    src: 'http://minionomaniya.ru/wp-content/uploads/2016/01/%D0%BC%D0%B8%D0%BD%D1%8C%D0%BE%D0%BD%D1%8B-%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8B-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8.jpg', // db in future
+                    description: 'descr'
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                template: '', // className
+                photos: [
+                  {
+                    position: 'adapt', // standart
+                    src: 'https://www.greenwaveraglan.com/wp-content/uploads/2016/01/GW-2.jpg' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDFYUJ8Lia0TjOKPec6L4KYNB2zpwNk_RsUSbFX4zeXc8JSglY' // db in future
+                  }
+                ]
+              },
+              {
+                template: '', // className
+                photos: [
+                  {
+                    position: 'adapt', // standart
+                    src: 'https://cdn.fishki.net/upload/post/2017/03/19/2245758/tn/02-funny-cat-wallpapercat-wallpaper.jpg' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6giVpc1eCRSHwDw8Tm6SE4jwqZGhjyM8z9vd5_ftMcx2TLJK0' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'http://koshsps.ru/image/trehcvetnye-koshki.jpg' // db in future
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                template: '', // className
+                photos: [
+                  {
+                    position: 'adapt', // standart
+                    src: 'https://i.ytimg.com/vi/8582Bo159t8/maxresdefault.jpg' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'https://i.ytimg.com/vi/6nZLLENs-eU/maxresdefault.jpg' // db in future
+                  }
+                ]
+              },
+              {
+                template: '', // className
+                photos: [
+                  {
+                    position: 'adapt', // standart
+                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRamNf6JcUuKunVSS6Seskgn3RxxCNI8x7Hq_H-XY1q883YQNzT' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'https://i03.fotocdn.net/s22/225/public_pin_m/81/2557235424.jpg' // db in future
+                  },
+                  {
+                    position: 'standart', // adapt
+                    src: 'http://w3.wallls.com/uploads/high-thumbnail/201602/23/84746.jpg' // db in future
                   }
                 ]
               }
@@ -172,15 +276,15 @@ export default {
                 photos: [
                   {
                     position: 'adapt', // standart
-                    src: '' // db in future
+                    src: 'http://kartinki24.ru/uploads/posts/2009-02/1234184976_dogs1_preview.jpg' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'http://www.gandex.ru/upl/oboi/u10302_5719_seva-5.jpg' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'http://bm.img.com.ua/nxs/img/prikol/images/large/3/9/315193.jpg' // db in future
                   }
                 ]
               }
@@ -191,11 +295,11 @@ export default {
                 photos: [
                   {
                     position: 'adapt', // standart
-                    src: '' // db in future
+                    src: 'http://mobilepics.ru/uploads/pictures/big_images/9409718.jpg' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'https://cs10.pikabu.ru/post_img/2018/01/14/7/1515929175189039857.jpg' // db in future
                   }
                 ]
               },
@@ -204,15 +308,15 @@ export default {
                 photos: [
                   {
                     position: 'adapt', // standart
-                    src: '' // db in future
+                    src: 'http://www.prikol.ru/wp-content/gallery/october-2017/kartinki-04102017-001.jpg' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'http://www.blogimam.com/wp-content/uploads/2017/03/besplatnye-kartinki.jpg' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'http://kaifolog.ru/uploads/posts/2016-04/thumbs/1460123100_001.jpg' // db in future
                   }
                 ]
               }
@@ -223,11 +327,11 @@ export default {
                 photos: [
                   {
                     position: 'adapt', // standart
-                    src: '' // db in future
+                    src: 'http://goodimg.ru/img/kartinki-na-rabochiy-priroda2.jpg' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'http://1079638729.rsc.cdn77.org/pic/v2/gallery/preview/fentezi-gory-luna-more-oblaka-pejzazh-26587.jpg' // db in future
                   }
                 ]
               },
@@ -236,111 +340,15 @@ export default {
                 photos: [
                   {
                     position: 'adapt', // standart
-                    src: '' // db in future
+                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXzVOtGEnAdPLD2h4tyP2Is-estf9Bj_07rEdAkSo9VtDELFpx' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'http://surprisse.com/muscards/view/2015/10/02/19u88uda350c0fhon5u9nsuma35chmdl.gif' // db in future
                   },
                   {
                     position: 'standart', // adapt
-                    src: '' // db in future
-                  }
-                ]
-              }
-            ],
-            [
-              {
-                template: '', // className
-                photos: [
-                  {
-                    position: 'adapt', // standart
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
-                  }
-                ]
-              },
-              {
-                template: '', // className
-                photos: [
-                  {
-                    position: 'adapt', // standart
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
-                  }
-                ]
-              }
-            ],
-            [
-              {
-                template: '', // className
-                photos: [
-                  {
-                    position: 'adapt', // standart
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
-                  }
-                ]
-              },
-              {
-                template: '', // className
-                photos: [
-                  {
-                    position: 'adapt', // standart
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
-                  }
-                ]
-              }
-            ],
-            [
-              {
-                template: '', // className
-                photos: [
-                  {
-                    position: 'adapt', // standart
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
-                  }
-                ]
-              },
-              {
-                template: '', // className
-                photos: [
-                  {
-                    position: 'adapt', // standart
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
-                  },
-                  {
-                    position: 'standart', // adapt
-                    src: '' // db in future
+                    src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMLJQjaAimIZwSo7_7TS1tvehmXBfqJrLs6_KAQfMROVeTLfE6' // db in future
                   }
                 ]
               }
@@ -475,7 +483,7 @@ export default {
 .PhotoBook__book {
   /*display: table;
   content: '';*/
-
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -483,6 +491,7 @@ export default {
 .PhotoBookSpread{
   /*display: table;
   content: '';*/
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -563,4 +572,38 @@ export default {
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
+
+/* Animation */
+  .flip-leave{
+  }
+  .flip-leave-to{
+  }
+  .flip-leave-active{
+    animation: flipOutX 10s linear
+  }
+  .flip-enter{
+  }
+  .flip-enter-to{
+  }
+  .flip-enter-active{
+    animation: flipInX 10s linear
+  }
+
+  @keyframes flipInX{
+      from{
+        transform: rotateX(90deg)
+      }
+      to{
+        transform: rotate(0deg)
+      }
+  }
+  @keyframes flipOutX{
+    from{
+      transform: rotateX(0deg)
+    }
+    to{
+      transform: rotateX(90deg)
+    }
+  }
+
 </style>
